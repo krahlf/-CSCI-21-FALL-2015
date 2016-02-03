@@ -1,9 +1,9 @@
 /*
  * Name        : lab_2.h
- * Author      : FILL IN
+ * Author      : Katherine Rahlf
  * Description : Using Arithmetic to finish the functions MakeChange() and
  *               LaunchHumanCannonball()
- * Sources     :
+ * Sources     : cplusplus.com
  */
 
 #ifndef LAB_H
@@ -26,5 +26,5 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle);
 
 // Create a Constant named kPI which is initialized to 3.1415927
 // CODE HERE
-
+ const double kPI = 3.1415927;
 #endif
