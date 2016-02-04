@@ -57,20 +57,23 @@ void FirstLab() {
 string checkExperience (char hasExperience) 
 {
     //CODE HERE
-  if(hasExperience == 'y') {
-    return string("Welcome back!");
-} else {
-    return string("Get ready to have some fun!");
-  
-}
+    //char hasExperience;
+    
+    if (hasExperience == 'y')
+        {
+        cout << "Welcome back\n";
+        }
+        else
+        {
+        cout << "Get ready to have some fun\n";
+        }
+    return string("");
 
 }// end checkExperience
 
 int main()
 {
-  char hasExperience;
-  char programmed_before;
-  hasExperience = programmed_before;
+
   FirstLab();
   return 0;
 }
