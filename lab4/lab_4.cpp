@@ -1,8 +1,9 @@
 /*
  * Name        : lab_4.cpp
- * Author      : FILL IN
+ * Author      : Katherine Rahlf
  * Description : Use branching statements, looping statements and string and
  *               character functions to complete the functions
+ * Sources used: cplusplus.com
  */
 
 #include "lab_4.h"
@@ -22,6 +23,13 @@
  */
 string MakeString(string label, double value, char separator) {
   // CODE HERE
+	ss.str("");
+	ss.clear();
+	ss << label << " " << separator << " " << value;
+	
+	//string makeSS = ss.str();
+	
+	return ss.str();
 }
 
 /*
@@ -34,6 +42,10 @@ string MakeString(string label, double value, char separator) {
  */
 char StringToChar(string value) {
   // CODE HERE
+	if (value.length() > 1) 
+		return ('\0');
+	else
+		return value[0];
 }
 
 /*
@@ -70,6 +82,17 @@ int StringToInt(string value) {
  */
 double StringToDouble(string value) {
   // CODE HERE
+	double ivalue = 0;
+	stringstream converter(value);
+	converter.exceptions(ios_base::failbit | ios_base::badbit);
+
+	try
+	{
+		converter >> ivalue;
+	}
+	catch (ios_base::failure f) {}
+	
+	return ivalue;
 }
 
 /*
@@ -85,4 +108,19 @@ double StringToDouble(string value) {
  */
 bool StringToBool(string value) {
   // CODE HERE
+	bool ivalue = 0;
+	stringstream converter(value);
+	converter.exceptions(ios_base::failbit | ios_base::badbit);
+	
+	try
+	{
+		converter >> ivalue;
+	}
+	catch (ios_base::failure f) {}
+	
+	if(value[0] == 'T') 
+		return true;
+		
+	else
+		return false;
 }

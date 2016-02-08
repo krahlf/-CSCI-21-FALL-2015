@@ -1,4 +1,4 @@
-c/*
+/*
  * Name        : assignment_1.cpp
  * Author      : Katherine Rahlf
  * Description : First codign assignment of the Spring semester
