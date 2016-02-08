@@ -23,6 +23,7 @@
  */
 string MakeString(string label, double value, char separator) {
   // CODE HERE
+  stringstream ss;
 	ss.str("");
 	ss.clear();
 	ss << label << " " << separator << " " << value;
@@ -42,6 +43,8 @@ string MakeString(string label, double value, char separator) {
  */
 char StringToChar(string value) {
   // CODE HERE
+	char ivalue = 0;
+	stringstream converter(value);
 	if (value.length() > 1) 
 		return ('\0');
 	else
@@ -123,4 +126,9 @@ bool StringToBool(string value) {
 		
 	else
 		return false;
+}
+
+int main() {
+	
+	return 0;
 }
