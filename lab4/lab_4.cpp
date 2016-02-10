@@ -23,12 +23,12 @@
  */
 string MakeString(string label, double value, char separator) {
   // CODE HERE
+  // declare stringstream
   stringstream ss;
 	ss.str("");
 	ss.clear();
+	// output with separator char
 	ss << label << " " << separator << " " << value;
-	
-	//string makeSS = ss.str();
 	
 	return ss.str();
 }
@@ -43,12 +43,12 @@ string MakeString(string label, double value, char separator) {
  */
 char StringToChar(string value) {
   // CODE HERE
-	char ivalue = 0;
-	stringstream converter(value);
-	if (value.length() > 1) 
+	if (value.length() > 1) {
 		return ('\0');
-	else
+	}
+	else {
 		return value[0];
+	}//end ifelse
 }
 
 /*
@@ -93,7 +93,9 @@ double StringToDouble(string value) {
 	{
 		converter >> ivalue;
 	}
-	catch (ios_base::failure f) {}
+	catch (ios_base::failure f) {
+		
+	}
 	
 	return ivalue;
 }
@@ -119,9 +121,11 @@ bool StringToBool(string value) {
 	{
 		converter >> ivalue;
 	}
-	catch (ios_base::failure f) {}
+	catch (ios_base::failure f) {
+		
+	}
 	
-	if(value[0] == 'T') 
+	if( value[0] == 'T' ) 
 		return true;
 		
 	else
