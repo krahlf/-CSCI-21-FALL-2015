@@ -1,8 +1,9 @@
 /*
  * Name        : lab_5.cpp
- * Author      : FILL IN
+ * Author      : Katherine Rahlf
  * Description : Practicing Functions. Use this file to write your
  *               Function Definitions (what goes below main()).
+ * Sources     : cplusplus.com, Luke Sathrum's header file, github.com
  */
 
 #include "lab_5.h"
@@ -17,8 +18,8 @@ int main() {
 /*
  * Displays "Hello world!" to stdout (cout) (no newline character after)
  */
-void Hello()
-{
+void Hello() {
+
     cout << "Hello world!";
     
     return;
@@ -28,8 +29,8 @@ void Hello()
  * Displays the string parameter to stdout (no newline character)
  * @param const string& - The string to display to stdout
  */
-void PrintMessage(string str_in)
-{
+void PrintMessage(string str_in) {
+
     cout << str_in;
     
     return;
@@ -39,8 +40,8 @@ void PrintMessage(string str_in)
  * Returns the integer value 42.
  * @return int - The value 42
  */
-int GetAnswer()
-{
+int GetAnswer() {
+
     return 42;
 }
 
@@ -51,18 +52,18 @@ int GetAnswer()
  * @param int - The second value
  * @return int - The larger of the two values, or either one if they are equal
  */
-int FindLarger(int in_one, int in_two)
-{
+int FindLarger(int int_one, int int_two) {
+
     int larger;
     
-    if (in_one > in_two)
-    {
-        larger = in_one;
+    if (int_one > int_two) {
+    
+        larger = int_one;
     }
     
-    else
-    {
-        larger = in_two;
+    else {
+    
+        larger = int_two;
     }
     
     return larger;
@@ -79,36 +80,20 @@ int FindLarger(int in_one, int in_two)
  * @param bool - To indicate if we should uppercase letters or not
  *             - Defaults to false
  */
-string BuildMessage()
-{
-    return "Message: empty";
-}
 
-
-//+1 overload
-string BuildMessage(string str_in)
-{
-    string  message = "Message: " + str_in;
+string BuildMessage(string message, bool upper) {
     
-    return message;
-}
-
-//+2 overload
-string BuildMessage(string str_in, bool caps)
-{
-    string message;
+    if (upper == true) {
     
-    if (caps == true)
-    {
-        int how_long = str_in.length();
+        int how_long = message.length();
         
-        for (int i = 0; i < how_long; i++)
-        {
-            str_in[i] = toupper(str_in[i]);
+        for (int i = 0; i < how_long; i++) {
+        
+            message[i] = toupper(message[i]);
         }
     }
     
-    message = "Message: " + str_in;
+    message = "Message: " + message;
     
     return message;
 }
