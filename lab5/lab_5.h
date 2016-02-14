@@ -1,6 +1,6 @@
 /*
  * Name        : lab_5.h
- * Author      : FILL IN
+ * Author      : Luke Sathrum
  * Description : Practicing Functions. Use this file to write your
  *               Function Prototypes (what goes above main()).
  */

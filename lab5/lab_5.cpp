@@ -1,6 +1,6 @@
 /*
  * Name        : lab_5.cpp
- * Author      : Katherine Rahlf
+ * Author      : Katherine Rahlf/Luke Sathrum
  * Description : Practicing Functions. Use this file to write your
  *               Function Definitions (what goes below main()).
  * Sources     : cplusplus.com, Luke Sathrum's header file, github.com
